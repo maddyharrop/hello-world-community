@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/maddyharrop/hello-world-community/static/css/main.f2487cce.css",
-    "main.js": "/maddyharrop/hello-world-community/static/js/main.53ad6b9d.js",
-    "static/js/453.dfb0778b.chunk.js": "/maddyharrop/hello-world-community/static/js/453.dfb0778b.chunk.js",
+    "main.css": "/maddyharrop/hello-world-community/static/css/main.69bf39f8.css",
+    "main.js": "/maddyharrop/hello-world-community/static/js/main.a1aafe6b.js",
     "static/media/Rainbow-Tipped_Butterfly.png": "/maddyharrop/hello-world-community/static/media/Rainbow-Tipped_Butterfly.2721f6141dc4e318809c.png",
     "static/media/communityIcon_8b7b51xui7wc1.png": "/maddyharrop/hello-world-community/static/media/communityIcon_8b7b51xui7wc1.d83fccbb0b06dc3174b6.png",
     "static/media/Celebration_Cake.png": "/maddyharrop/hello-world-community/static/media/Celebration_Cake.b11cecf87ccd2a2840e8.png",
@@ -11,12 +10,11 @@
     "static/media/Amethyst.png": "/maddyharrop/hello-world-community/static/media/Amethyst.8557f02085957d3c6c5d.png",
     "static/media/Hunters_Horn.png": "/maddyharrop/hello-world-community/static/media/Hunters_Horn.193cc62aa8ccdb921a16.png",
     "index.html": "/maddyharrop/hello-world-community/index.html",
-    "main.f2487cce.css.map": "/maddyharrop/hello-world-community/static/css/main.f2487cce.css.map",
-    "main.53ad6b9d.js.map": "/maddyharrop/hello-world-community/static/js/main.53ad6b9d.js.map",
-    "453.dfb0778b.chunk.js.map": "/maddyharrop/hello-world-community/static/js/453.dfb0778b.chunk.js.map"
+    "main.69bf39f8.css.map": "/maddyharrop/hello-world-community/static/css/main.69bf39f8.css.map",
+    "main.a1aafe6b.js.map": "/maddyharrop/hello-world-community/static/js/main.a1aafe6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2487cce.css",
-    "static/js/main.53ad6b9d.js"
+    "static/css/main.69bf39f8.css",
+    "static/js/main.a1aafe6b.js"
   ]
 }
