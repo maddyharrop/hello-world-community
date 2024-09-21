@@ -1,0 +1,271 @@
+:root {
+  --primary-color: #2596be;
+  --secondary-color: #04a4c2;
+  --background-color: #e3f6f9;
+  --dark-color: #04518e;
+  --darker-color: #085681;
+  --accent-color: #5aa0c2;
+  --light-accent-color: #6fc5e0;
+  --muted-color: #2d81a7;
+  --faded-color: #86acc5;
+  --highlight-color: #0790cc;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #1e1e1e;
+  color: #c5c5c5;
+  text-align: center;
+  padding: 20px;
+}
+
+body.light-mode {
+  background-color: #f0f0f0;
+
+}
+
+.MainContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.Content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.ContentSection {
+  padding: 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.HeaderContainer {
+  display: flex;
+  align-items: center;
+  /* Center items vertically */
+  justify-content: space-between;
+  /* Space items across */
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.HeaderContent {
+  display: flex;
+  align-items: center;
+  /* Center items vertically */
+}
+
+.HeaderText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align text to the left */
+  margin-right: 20px;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.NavBar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.NavBar a:hover {
+  background-color: var(--secondary-color);
+}
+
+.LightModeButton {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.LightModeButton:hover {
+  background-color: var(--highlight-color);
+}
+
+.GameTime {
+  margin-left: 20px;
+  /* Space between game time and other elements */
+  padding: 10px;
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+
+.Palia-icon {
+  height: 100px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.App-header h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.print {
+  color: #569cd6;
+}
+
+.parentheses {
+  color: #d4d4d4;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.ContentSections {
+  flex: 1;
+}
+
+.Sidebar,
+.RightSidebar {
+  width: 350px;
+  /* Fixed width for both sidebars */
+  background-color: var(--se);
+  /* Sidebar background color */
+  padding: 20px;
+  /* Add some padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Shadow for depth */
+  height: calc(100vh - 60px);
+  /* Full viewport height minus the header height */
+  border-radius: 20px;
+  /* Rounded corners */
+  display: flex;
+  /* Use flexbox for alignment */
+  flex-direction: column;
+  /* Stack content vertically */
+  justify-content: flex-start;
+  /* Align items to the top */
+}
+
+.Sidebar .ContentSection,
+.RightSidebar .ContentSection {
+  margin-bottom: 20px;
+  /* Space between sections */
+}
+
+.Sidebar iframe,
+.RightSidebar iframe {
+  width: 100%;
+  /* Full width of sidebar */
+  height: 100%;
+  /* Full height of sidebar */
+  border: none;
+  /* Remove border for a cleaner look */
+  border-radius: 20px;
+  /* Match border radius */
+}
+
+.widget-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.widget-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .HeaderContainer {
+    flex-direction: column;
+    /* Stack header items vertically on smaller screens */
+    align-items: center;
+    /* Center items */
+  }
+
+  .NavBar {
+    justify-content: center;
+    /* Center navbar items */
+    padding: 10px;
+  }
+}
+
+.comm-party-list {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.comm-party-list li {
+  display: flex; /* Align emoji and text in a row */
+  align-items: center; /* Center items vertically */
+  background-color: black; /* Black background */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Add padding around list items */
+  margin: 5px 0; /* Space between items */
+  border-radius: 5px; /* Optional: rounded corners */
+  width: 200px; /* Set a fixed width for all items */
+  justify-content: center; /* Center content within the item */
+}
+
+.emoji-container {
+  margin-right: 10px; /* Space between emoji and text */
+}
+
+.emoji {
+  width: 30px; /* Fixed width for emoji */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+.Party {
+  padding: 16px;
+  /* Adjust padding as needed */
+  background-color: var(--secondary-color);
+  /* Match the background color */
+  color: white;
+  /* Ensure text is visible */
+  border-radius: 8px;
+  /* Optional: for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional: for a shadow effect */
+  margin-bottom: 20px;
+  /* Space between sections */
+}
