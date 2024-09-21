@@ -1,10 +1,10 @@
 import './styles/App.css';
 import ContentSection from './components/ContentSection';
 import NavBar from './components/Header';
-import LeftSidebar from './components/LeftSidebar';
+
 import Countdown from './components/Countdown';
 import React, { useEffect, useState } from 'react';
-import TwitterEmbed from './components/TwitterEmbed';
+
 import RightSidebar from './components/RightSidebar';
 import WidgetBot from './components/WidgetBot';
 import FoodParty from './components/FoodParty';
@@ -13,7 +13,7 @@ import CommParty from './components/CommParty';
 
 function App() {
   const [greeting, setGreeting] = useState('');
-  const [featuredMember, setFeaturedMember] = useState('');
+  // const [featuredMember, setFeaturedMember] = useState('');
 
   const greetings = [
     "Hello, World!",
@@ -35,10 +35,10 @@ function App() {
       setGreeting(randomGreeting);
     }
 
-    if (members.length > 0) {
-      const randomMember = members[Math.floor(Math.random() * members.length)];
-      setFeaturedMember(randomMember);
-    }
+    // if (members.length > 0) {
+    //   const randomMember = members[Math.floor(Math.random() * members.length)];
+    //   setFeaturedMember(randomMember);
+    // }
   }, []);
 
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -73,7 +73,7 @@ function App() {
       <div className="Content">
         <div className="HeaderContainer">
           <NavBar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-         
+
         </div>
 
         <div className="ContentSections">
