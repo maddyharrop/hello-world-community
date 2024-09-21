@@ -78,12 +78,12 @@ function App() {
 
         <div className="ContentSections">
           <ContentSection title="Today's Greeting:" content={greeting} />
-          <Countdown targetDate={targetDate} />
+
 
           {/* <ContentSection title={`Today's Featured Member: ${featuredMember.name}`} content={featuredMember.bio} /> */}
+          <Countdown targetDate={targetDate} />
           <FoodParty />
           <CommParty />
-
         </div>
       </div>
 

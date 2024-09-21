@@ -26,12 +26,25 @@ const Countdown = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="ContentSection">
-      <h2>Countdown to the next update:</h2>
-      {timeLeft.days ? `${timeLeft.days} days ` : ''}
-      {timeLeft.hours ? `${timeLeft.hours} hours ` : ''}
-      {timeLeft.minutes ? `${timeLeft.minutes} minutes ` : ''}
-      {timeLeft.seconds ? `${timeLeft.seconds} seconds` : ''}
+    <div className="background_countdown">
+      <div className='countdown-text'>
+        <div className="countdown-item days">
+          <h3>Days</h3>
+          <p>{timeLeft.days ? timeLeft.days : '0'}</p>
+        </div>
+        <div className="countdown-item">
+          <h3>Hours</h3>
+          <p>{timeLeft.hours ? timeLeft.hours : '0'}</p>
+        </div>
+        <div className="countdown-item">
+          <h3>Minutes</h3>
+          <p>{timeLeft.minutes ? timeLeft.minutes : '0'}</p>
+        </div>
+        <div className="countdown-item">
+          <h3>Seconds</h3>
+          <p>{timeLeft.seconds ? timeLeft.seconds : '0'}</p>
+        </div>
+      </div>
     </div>
   );
 };

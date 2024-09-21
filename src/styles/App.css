@@ -9,10 +9,20 @@
   --muted-color: #2d81a7;
   --faded-color: #86acc5;
   --highlight-color: #0790cc;
+  --wasabi: #638428;
+  --sprout: #cfddb5;
+  --rangitoto: #2b3423;
+  --cerulean: #0f9eed;
+  --gulf-stream: #81abb5;
+  --morning-glory: #97d8dc;
+  --bismark: #4d767f;
+  --shakespeare: #50a0d1;
+  --azure: #3362ae;
+  --piper: #c16527;
 }
 
 body {
-  font-family: 'Courier New', monospace;
+  font-family: 'Courier New', Courier, monospace !important;
   background-color: #1e1e1e;
   color: #c5c5c5;
   text-align: center;
@@ -21,7 +31,6 @@ body {
 
 body.light-mode {
   background-color: #f0f0f0;
-
 }
 
 .MainContainer {
@@ -46,12 +55,103 @@ body.light-mode {
   margin-bottom: 20px;
 }
 
+.background_countdown {
+  min-width: 500px;
+  min-height: 400px;
+  padding: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background_countdown::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(to bottom, var(--cerulean), var(--wasabi));
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.background_countdown::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-image: url("../img/background_countdown.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  opacity: 0.6;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.countdown-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.countdown-item {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.countdown-item.days {
+  margin-right: -50px;
+}
+
+.countdown-item p {
+  font-size: 9em;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  margin: 0;
+  position: relative;
+}
+
+.countdown-item h3 {
+  font-size: 2.5em;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+
+
+
+
+
+
 .HeaderContainer {
   display: flex;
   align-items: center;
-  /* Center items vertically */
   justify-content: space-between;
-  /* Space items across */
   background-color: #2b2b2b;
   border-radius: 10px;
   padding: 20px;
@@ -61,14 +161,12 @@ body.light-mode {
 .HeaderContent {
   display: flex;
   align-items: center;
-  /* Center items vertically */
 }
 
 .HeaderText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* Align text to the left */
   margin-right: 20px;
 }
 
@@ -92,6 +190,7 @@ body.light-mode {
 }
 
 .LightModeButton {
+  font-family: 'Courier New', Courier, monospace !important;
   background-color: var(--primary-color);
   border: none;
   padding: 10px 20px;
@@ -108,7 +207,6 @@ body.light-mode {
 
 .GameTime {
   margin-left: 20px;
-  /* Space between game time and other elements */
   padding: 10px;
   color: white;
   background-color: var(--secondary-color);
@@ -122,7 +220,7 @@ body.light-mode {
 }
 
 .App-header h1 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace !important;
   font-weight: normal;
   color: #ffffff;
   background-color: #1e1e1e;
@@ -132,15 +230,15 @@ body.light-mode {
 }
 
 .print {
-  color: #569cd6;
+  color: #c97de0;
 }
 
 .parentheses {
-  color: #d4d4d4;
+  color: #adb4c1;
 }
 
 .string {
-  color: #ce9178;
+  color: #9dc77e;
 }
 
 .ContentSections {
@@ -150,41 +248,27 @@ body.light-mode {
 .Sidebar,
 .RightSidebar {
   width: 350px;
-  /* Fixed width for both sidebars */
   background-color: var(--se);
-  /* Sidebar background color */
   padding: 20px;
-  /* Add some padding */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  /* Shadow for depth */
   height: calc(100vh - 60px);
-  /* Full viewport height minus the header height */
   border-radius: 20px;
-  /* Rounded corners */
   display: flex;
-  /* Use flexbox for alignment */
   flex-direction: column;
-  /* Stack content vertically */
   justify-content: flex-start;
-  /* Align items to the top */
 }
 
 .Sidebar .ContentSection,
 .RightSidebar .ContentSection {
   margin-bottom: 20px;
-  /* Space between sections */
 }
 
 .Sidebar iframe,
 .RightSidebar iframe {
   width: 100%;
-  /* Full width of sidebar */
   height: 100%;
-  /* Full height of sidebar */
   border: none;
-  /* Remove border for a cleaner look */
   border-radius: 20px;
-  /* Match border radius */
 }
 
 .widget-container {
@@ -207,65 +291,50 @@ body.light-mode {
 @media (max-width: 768px) {
   .HeaderContainer {
     flex-direction: column;
-    /* Stack header items vertically on smaller screens */
     align-items: center;
-    /* Center items */
   }
 
   .NavBar {
     justify-content: center;
-    /* Center navbar items */
     padding: 10px;
   }
 }
 
 .comm-party-list {
-  list-style-type: none; /* Remove default list style */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comm-party-list li {
-  display: flex; /* Align emoji and text in a row */
-  align-items: center; /* Center items vertically */
-  background-color: black; /* Black background */
-  color: white; /* Text color */
-  padding: 5px 10px; /* Add padding around list items */
-  margin: 5px 0; /* Space between items */
-  border-radius: 5px; /* Optional: rounded corners */
-  width: 200px; /* Set a fixed width for all items */
-  justify-content: center; /* Center content within the item */
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  width: 200px;
+  justify-content: center;
 }
 
 .emoji-container {
-  margin-right: 10px; /* Space between emoji and text */
+  margin-right: 10px;
 }
 
 .emoji {
-  width: 30px; /* Fixed width for emoji */
-  height: auto; /* Maintain aspect ratio */
+  width: 30px;
+  height: auto;
 }
-
-
-
-
-
-
 
 .Party {
   padding: 16px;
-  /* Adjust padding as needed */
   background-color: var(--secondary-color);
-  /* Match the background color */
   color: white;
-  /* Ensure text is visible */
   border-radius: 8px;
-  /* Optional: for rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Optional: for a shadow effect */
   margin-bottom: 20px;
-  /* Space between sections */
 }
