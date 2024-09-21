@@ -2,7 +2,7 @@
   "name": "hello-world-community",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maddyharrop.github.io/palia-website",
+  "homepage": "https://github.com/maddyharrop/hello-world-community",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
