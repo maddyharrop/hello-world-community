@@ -8,10 +8,7 @@ import WidgetBot from './components/WidgetBot';
 import FoodParty from './components/FoodParty';
 import CommParty from './components/CommParty';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Community from './components/Community';
-import FAQ from './components/FAQ'
-import UpcomingEvents from './components/UpcomingEvents';
+
 
 function App() {
   const [greeting, setGreeting] = useState('');
@@ -54,64 +51,37 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="MainContainer">
-        <div>
-          <WidgetBot />
-        </div>
-
-        <Routes>
-          <Route
-            path="/community"
-            element={
-              <div className="Content">
-                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-                <Community />
-                <Footer />
-              </div>
-            }
-          />
-          <Route
-            path="/faq"
-            element={
-              <div className="Content">
-                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-                <FAQ />
-                <Footer />
-              </div>
-            }
-          />
-          <Route
-            path="/upcoming-events"
-            element={
-              <div className="Content">
-                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-                <UpcomingEvents />
-                <Footer />
-              </div>
-            }
-          />
-
-          <Route
-            path="/"
-            element={
-              <div className="Content">
-                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-                <ContentSection title="Today's Greeting:" content={greeting} />
-                <Countdown targetDate={targetDate} />
-                <FoodParty />
-                <CommParty />
-                <Footer />
-              </div>
-            }
-          />
-        </Routes>
-
-        <div>
-          <RightSidebar />
-        </div>
+    <div className="MainContainer">
+      {/* <div>
+        <LeftSidebar />
+      </div> */}
+      <div>
+        <WidgetBot />
       </div>
-    </Router>
+
+
+      <div className="Content">
+        <div className="HeaderContainer">
+          <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+
+        </div>
+
+        <div className="ContentSections">
+          <ContentSection title="Today's Greeting:" content={greeting} />
+
+
+          {/* <ContentSection title={`Today's Featured Member: ${featuredMember.name}`} content={featuredMember.bio} /> */}
+          <Countdown targetDate={targetDate} />
+          <FoodParty />
+          <CommParty />
+        </div>
+        <Footer />
+
+      </div>
+      <div>
+        <RightSidebar />
+      </div>
+    </div>
   );
 }
 

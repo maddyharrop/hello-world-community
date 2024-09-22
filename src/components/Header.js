@@ -1,7 +1,6 @@
 import React from 'react';
 import paliaIcon from '../img/communityIcon_8b7b51xui7wc1.png';
 import GameTime from './InGameTime.js';
-import { Link } from 'react-router-dom';
 
 function Header({ greeting, toggleDarkMode, isDarkMode }) {
   return (
@@ -20,9 +19,8 @@ function Header({ greeting, toggleDarkMode, isDarkMode }) {
         </div>
       </div>
       <nav className='NavBar'>
-        <Link to="/">Home</Link>
+        <a to="/">Home</a>
         <a href="https://discord.gg/ZZX3vvzj">Discord</a>
-        <Link to="/community" >About our community</Link>
       </nav>
       <div>
         <button onClick={toggleDarkMode} className="LightModeButton">
