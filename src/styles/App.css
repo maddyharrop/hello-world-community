@@ -463,26 +463,3 @@ body {
   background-color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
-  .HeaderContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .comm-party-list {
-    flex-direction: column;
-
-    align-items: center;
-
-  }
-
-  .GameTime {
-    width: 100%;
-
-  }
-
-  .Footer {
-    padding: 10px;
-
-  }
-}

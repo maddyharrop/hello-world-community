@@ -1,10 +1,6 @@
 import React from 'react';
-import Header from './Header'; // Adjust the path if necessary
-import { useLocation } from 'react-router-dom';
 
 function Community() {
-    const location = useLocation(); // Get the current location to pass props if needed
-
     return (
         <div className="CommunityPage">
             <div className="CommunityContent">

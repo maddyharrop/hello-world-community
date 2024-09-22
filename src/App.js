@@ -50,16 +50,15 @@ function App() {
     };
   }, []);
 
+  console.log("App is running");
+
+
   return (
+    
     <div className="MainContainer">
-      {/* <div>
-        <LeftSidebar />
-      </div> */}
       <div>
         <WidgetBot />
       </div>
-
-
       <div className="Content">
         <div className="HeaderContainer">
           <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
@@ -68,8 +67,6 @@ function App() {
 
         <div className="ContentSections">
           <ContentSection title="Today's Greeting:" content={greeting} />
-
-
           {/* <ContentSection title={`Today's Featured Member: ${featuredMember.name}`} content={featuredMember.bio} /> */}
           <Countdown targetDate={targetDate} />
           <FoodParty />
