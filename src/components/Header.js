@@ -1,6 +1,7 @@
 import React from 'react';
 import paliaIcon from '../img/communityIcon_8b7b51xui7wc1.png';
 import GameTime from './InGameTime.js';
+import { Link } from 'react-router-dom';
 
 function Header({ greeting, toggleDarkMode, isDarkMode }) {
   return (
@@ -14,14 +15,14 @@ function Header({ greeting, toggleDarkMode, isDarkMode }) {
             <span className="string">'hello world'</span>
             <span className="parentheses">)</span>
           </h1>
-          <p>Welcome to our Palia community hub!</p>
+          <p className='Header-Tagline'>Welcome to our Palia community hub!</p>
           <p>{greeting}</p>
         </div>
       </div>
       <nav className='NavBar'>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
         <a href="https://discord.gg/ZZX3vvzj">Discord</a>
-        <a href="/community">About our community</a>
+        <Link to="/community" >About our community</Link>
       </nav>
       <div>
         <button onClick={toggleDarkMode} className="LightModeButton">

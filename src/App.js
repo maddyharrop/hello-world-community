@@ -8,11 +8,13 @@ import WidgetBot from './components/WidgetBot';
 import FoodParty from './components/FoodParty';
 import CommParty from './components/CommParty';
 import Footer from './components/Footer';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Community from './components/Community';
+import FAQ from './components/FAQ'
+import UpcomingEvents from './components/UpcomingEvents';
 
 function App() {
   const [greeting, setGreeting] = useState('');
-  // const [featuredMember, setFeaturedMember] = useState('');
 
   const greetings = [
     "Hello, World!",
@@ -22,10 +24,6 @@ function App() {
     "Ready for another adventure?"
   ];
 
-  const members = [
-    { name: 'Alice', bio: 'Expert in crafting.' },
-    { name: 'Bob', bio: 'Master of exploration.' },
-  ];
   const targetDate = new Date("2024-09-24T00:00:00");
 
   useEffect(() => {
@@ -33,11 +31,6 @@ function App() {
       const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
       setGreeting(randomGreeting);
     }
-
-    // if (members.length > 0) {
-    //   const randomMember = members[Math.floor(Math.random() * members.length)];
-    //   setFeaturedMember(randomMember);
-    // }
   }, []);
 
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -50,51 +43,75 @@ function App() {
     document.body.classList.toggle('light-mode', !isDarkMode);
   }, [isDarkMode]);
 
-
   useEffect(() => {
     const script = document.createElement('script');
     script.src = "https://cdn.jsdelivr.net/npm/@widgetbot/html-embed";
     script.async = true;
     document.body.appendChild(script);
-
-    // Cleanup script on unmount
     return () => {
       document.body.removeChild(script);
     };
   }, []);
 
   return (
-    <div className="MainContainer">
-      {/* <div>
-        <LeftSidebar />
-      </div> */}
-      <div>
-        <WidgetBot />
-      </div>
-
-
-      <div className="Content">
-        <div className="HeaderContainer">
-          <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-
+    <Router>
+      <div className="MainContainer">
+        <div>
+          <WidgetBot />
         </div>
 
-        <div className="ContentSections">
-          <ContentSection title="Today's Greeting:" content={greeting} />
+        <Routes>
+          <Route
+            path="/community"
+            element={
+              <div className="Content">
+                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                <Community />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/faq"
+            element={
+              <div className="Content">
+                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                <FAQ />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/upcoming-events"
+            element={
+              <div className="Content">
+                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                <UpcomingEvents />
+                <Footer />
+              </div>
+            }
+          />
 
+          <Route
+            path="/"
+            element={
+              <div className="Content">
+                <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                <ContentSection title="Today's Greeting:" content={greeting} />
+                <Countdown targetDate={targetDate} />
+                <FoodParty />
+                <CommParty />
+                <Footer />
+              </div>
+            }
+          />
+        </Routes>
 
-          {/* <ContentSection title={`Today's Featured Member: ${featuredMember.name}`} content={featuredMember.bio} /> */}
-          <Countdown targetDate={targetDate} />
-          <FoodParty />
-          <CommParty />
+        <div>
+          <RightSidebar />
         </div>
-        <Footer />
-
       </div>
-      <div>
-        <RightSidebar />
-      </div>
-    </div>
+    </Router>
   );
 }
 
