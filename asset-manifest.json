@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hello-world-community/static/css/main.cac97178.css",
-    "main.js": "/hello-world-community/static/js/main.9a15bd3b.js",
+    "main.css": "/hello-world-community/static/css/main.d812a20f.css",
+    "main.js": "/hello-world-community/static/js/main.61ef2105.js",
     "static/media/background_countdown.png": "/hello-world-community/static/media/background_countdown.e3f4e7c77205fc727cdb.png",
     "static/media/Rainbow-Tipped_Butterfly.png": "/hello-world-community/static/media/Rainbow-Tipped_Butterfly.2721f6141dc4e318809c.png",
     "static/media/communityIcon_8b7b51xui7wc1.png": "/hello-world-community/static/media/communityIcon_8b7b51xui7wc1.d83fccbb0b06dc3174b6.png",
@@ -11,11 +11,11 @@
     "static/media/Amethyst.png": "/hello-world-community/static/media/Amethyst.8557f02085957d3c6c5d.png",
     "static/media/Hunters_Horn.png": "/hello-world-community/static/media/Hunters_Horn.193cc62aa8ccdb921a16.png",
     "index.html": "/hello-world-community/index.html",
-    "main.cac97178.css.map": "/hello-world-community/static/css/main.cac97178.css.map",
-    "main.9a15bd3b.js.map": "/hello-world-community/static/js/main.9a15bd3b.js.map"
+    "main.d812a20f.css.map": "/hello-world-community/static/css/main.d812a20f.css.map",
+    "main.61ef2105.js.map": "/hello-world-community/static/js/main.61ef2105.js.map"
   },
   "entrypoints": [
-    "static/css/main.cac97178.css",
-    "static/js/main.9a15bd3b.js"
+    "static/css/main.d812a20f.css",
+    "static/js/main.61ef2105.js"
   ]
 }
