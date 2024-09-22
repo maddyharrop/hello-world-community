@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hello-world-community/static/css/main.d812a20f.css",
+    "main.css": "/hello-world-community/static/css/main.66d0acab.css",
     "main.js": "/hello-world-community/static/js/main.61ef2105.js",
     "static/media/background_countdown.png": "/hello-world-community/static/media/background_countdown.e3f4e7c77205fc727cdb.png",
     "static/media/Rainbow-Tipped_Butterfly.png": "/hello-world-community/static/media/Rainbow-Tipped_Butterfly.2721f6141dc4e318809c.png",
@@ -11,11 +11,11 @@
     "static/media/Amethyst.png": "/hello-world-community/static/media/Amethyst.8557f02085957d3c6c5d.png",
     "static/media/Hunters_Horn.png": "/hello-world-community/static/media/Hunters_Horn.193cc62aa8ccdb921a16.png",
     "index.html": "/hello-world-community/index.html",
-    "main.d812a20f.css.map": "/hello-world-community/static/css/main.d812a20f.css.map",
+    "main.66d0acab.css.map": "/hello-world-community/static/css/main.66d0acab.css.map",
     "main.61ef2105.js.map": "/hello-world-community/static/js/main.61ef2105.js.map"
   },
   "entrypoints": [
-    "static/css/main.d812a20f.css",
+    "static/css/main.66d0acab.css",
     "static/js/main.61ef2105.js"
   ]
 }
