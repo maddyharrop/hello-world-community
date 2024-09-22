@@ -19,32 +19,53 @@
   --shakespeare: #50a0d1;
   --azure: #3362ae;
   --piper: #c16527;
+  --background-color: #1e1e1e;
+  --text-color: #c5c5c5;
+}
+
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Courier New', Courier, monospace !important;
   background-color: #1e1e1e;
   color: #c5c5c5;
   text-align: center;
-  padding: 20px;
-}
-
-body.light-mode {
-  background-color: #f0f0f0;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .MainContainer {
   display: flex;
   height: 100vh;
+  width: 90%;
 }
 
 .Content {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin: 0 20px;
 }
+
+/* .Content {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+} */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 
 .ContentSection {
   padding: 16px;
@@ -55,8 +76,20 @@ body.light-mode {
   margin-bottom: 20px;
 }
 
+.ContentSection:hover {
+  transform: translate(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ContentSection,
+.Party,
+.RightSidebar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 .background_countdown {
-  min-width: 500px;
+  min-width: 400px;
   min-height: 400px;
   padding: 16px;
   background-size: cover;
@@ -144,10 +177,6 @@ body.light-mode {
 }
 
 
-
-
-
-
 .HeaderContainer {
   display: flex;
   align-items: center;
@@ -168,6 +197,7 @@ body.light-mode {
   flex-direction: column;
   align-items: flex-start;
   margin-right: 20px;
+  font-size: 50%;
 }
 
 .NavBar {
@@ -189,20 +219,25 @@ body.light-mode {
   background-color: var(--secondary-color);
 }
 
+.light-mode {
+  background-color: var(--background-color-light);
+}
+
 .LightModeButton {
-  font-family: 'Courier New', Courier, monospace !important;
+  min-width: 150px;
+  height: 40px;
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
   background-color: var(--primary-color);
   border: none;
-  padding: 10px 20px;
   color: white;
   border-radius: 20px;
   cursor: pointer;
-  margin-left: 20px;
   transition: background-color 0.3s ease;
 }
 
 .LightModeButton:hover {
-  background-color: var(--highlight-color);
+  background-color: var(--secondary-color);
 }
 
 .GameTime {
@@ -211,7 +246,26 @@ body.light-mode {
   color: white;
   background-color: var(--secondary-color);
   border-radius: 8px;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
+
+.GameTime h2 {
+  margin: 0;
+  font-size: 1.2em;
+
+}
+
+.GameTime p {
+  margin: 0;
+  font-size: 1.5em;
+}
+
 
 .Palia-icon {
   height: 100px;
@@ -247,7 +301,6 @@ body.light-mode {
 
 .Sidebar,
 .RightSidebar {
-  width: 350px;
   background-color: var(--se);
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -265,7 +318,7 @@ body.light-mode {
 
 .Sidebar iframe,
 .RightSidebar iframe {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   border: none;
   border-radius: 20px;
@@ -276,28 +329,16 @@ body.light-mode {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   min-height: 300px;
 }
 
 .widget-container iframe {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   border: none;
   border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-  .HeaderContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .NavBar {
-    justify-content: center;
-    padding: 10px;
-  }
 }
 
 .comm-party-list {
@@ -305,19 +346,18 @@ body.light-mode {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
 .comm-party-list li {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: #2b2b2b;
   color: white;
   padding: 5px 10px;
-  margin: 5px 0;
+  margin: 5px;
   border-radius: 5px;
-  width: 200px;
   justify-content: center;
 }
 
@@ -337,4 +377,72 @@ body.light-mode {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #2b2b2b;
+  /* or any color from your palette */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  /* Keep it fixed to the bottom */
+  bottom: 0;
+  /* width: 100%; */
+  border-radius: 5px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-links a:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .HeaderContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .comm-party-list {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+  }
+
+  .GameTime {
+      width: 100%; /* Make it full width on smaller screens */
+  }
+
+  .Footer {
+      padding: 10px; /* Adjust padding */
+  }
 }

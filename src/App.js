@@ -1,14 +1,13 @@
 import './styles/App.css';
 import ContentSection from './components/ContentSection';
-import NavBar from './components/Header';
-
+import Header from './components/Header';
 import Countdown from './components/Countdown';
 import React, { useEffect, useState } from 'react';
-
 import RightSidebar from './components/RightSidebar';
 import WidgetBot from './components/WidgetBot';
 import FoodParty from './components/FoodParty';
 import CommParty from './components/CommParty';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -44,9 +43,13 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('light-mode');
+    setIsDarkMode(prevMode => !prevMode);
   };
+
+  useEffect(() => {
+    document.body.classList.toggle('light-mode', !isDarkMode);
+  }, [isDarkMode]);
+
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -72,7 +75,7 @@ function App() {
 
       <div className="Content">
         <div className="HeaderContainer">
-          <NavBar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+          <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
 
         </div>
 
@@ -85,8 +88,9 @@ function App() {
           <FoodParty />
           <CommParty />
         </div>
-      </div>
+        <Footer />
 
+      </div>
       <div>
         <RightSidebar />
       </div>

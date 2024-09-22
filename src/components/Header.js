@@ -19,7 +19,7 @@ function Header({ greeting, toggleDarkMode, isDarkMode }) {
         </div>
       </div>
       <nav className='NavBar'>
-        <a href="/home">Home</a>
+        <a href="/">Home</a>
         <a href="https://discord.gg/ZZX3vvzj">Discord</a>
         <a href="/community">About our community</a>
       </nav>
