@@ -21,7 +21,7 @@ function App() {
     "Ready for another adventure?"
   ];
 
-  const targetDate = new Date("2024-09-24T00:00:00");
+  const targetDate = new Date("2024-09-24T12:00:00");
 
   useEffect(() => {
     if (greetings.length > 0) {
@@ -54,7 +54,7 @@ function App() {
 
 
   return (
-    
+
     <div className="MainContainer">
       <div>
         <WidgetBot />
@@ -69,8 +69,12 @@ function App() {
           <ContentSection title="Today's Greeting:" content={greeting} />
           {/* <ContentSection title={`Today's Featured Member: ${featuredMember.name}`} content={featuredMember.bio} /> */}
           <Countdown targetDate={targetDate} />
-          <FoodParty />
-          <CommParty />
+          <div className='Party-Section'>
+            <FoodParty />
+          </div>
+          <div className='Party-Section'>
+            <CommParty />
+          </div>
         </div>
         <Footer />
 
