@@ -22,7 +22,7 @@ function App() {
   ];
 
 
-  const targetDate = new Date('2024-09-24T12:00:00-05:00');
+  const targetDate = new Date('2024-10-08T12:00:00-05:00');
 
   useEffect(() => {
     if (greetings.length > 0) {
